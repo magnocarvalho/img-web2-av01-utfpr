@@ -3,6 +3,7 @@ package br.edu.utfpr.app;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,7 @@ public class Admin extends HttpServlet {
         //TODO: verificar a sessão
         //TODO: implementar home de admin
         //pw.println("Não esqueça de criar a view home.admin");
-        pw.print("<form action=\"/AvaliacaoWeb/save\" method=\"post\" enctype=\"multipart/form-data\">\n"
+        pw.print("<form action='/AvaliacaoWeb/save' method='get' enctype='multipart/form-data'>\n"
                 + "	<label for=\"upload\">Selecione um arquivo</label>\n"
                 + "	<input type=\"file\" name=\"upload\" id=\"upload\">\n"
                 + "	<button type=\"submit\">Cadastrar</button>\n"
